@@ -1,0 +1,72 @@
+:root {
+	--foreground: #222;
+	--background: #fcfcfc;
+	--highlight: #b00;
+	--guifont: Trebuchet MS, serif;
+	--measure: 1.5;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	box-sizing: border-box;
+	min-height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 0 1em 3em;
+	color: var(--foreground);
+	background: var(--background);
+	font: 1.3em/var(--measure) Georgia;
+}
+
+body > header {
+	font: 0.9em var(--guifont);
+}
+
+.logotype {
+	color: var(--foreground);
+	background: transparent;
+	letter-spacing: 0.05em;
+	font: 12vw/1 Trebuchet MS, sans-serif;
+}
+
+@media only screen and (min-width: 48em) {
+	.logotype {
+		font-size: 6rem;
+	}
+}
+
+.logotype span {
+	display: inline-block;
+	padding-bottom: 0.15em;
+	border-style: solid;
+	border-width: 0.075em 0;
+}
+
+.logotype span:nth-of-type(1) {
+	border-bottom-color: transparent;
+}
+
+.logotype span:nth-of-type(3) {
+	border-top-color: transparent;
+}
+
+.logotype span:nth-of-type(1),
+.logotype span:nth-of-type(2) {
+	border-top-color: var(--highlight);
+}
+
+.logotype span:nth-last-of-type(2) {
+	border-image: linear-gradient(90deg, var(--highlight), var(--foreground)) 1;
+}
+
+.logotype span:nth-of-type(2),
+.logotype span:nth-of-type(3) {
+	border-bottom-color: var(--foreground);
+	color: var(--highlight);
+	background-color: transparent;
+}
