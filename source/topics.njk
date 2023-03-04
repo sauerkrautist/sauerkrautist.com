@@ -1,0 +1,40 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: topic
+  filter:
+    - all
+    - articles
+    - Bike-shedding
+    - Scrapyard
+  addAllPagesToCollections: false
+layout: article.njk
+theme: genderqueer
+css:
+  - table
+  - topics
+eleventyComputed:
+  title: "Topic: {{ topic }}"
+  permalink: /@{{ topic | slugify }}/
+---
+
+{% set topic = pagination.items[0] %}
+
+{% for key, value in collections %}
+  {% if key == topic %}
+    {% set base = key | slugify %}
+    {% set description %}
+      {%- include 'topics/' + base + '.md' ignore missing  %}
+    {% endset %}
+    {{ description | markdown_block | safe }}
+  {% endif %}
+{% endfor %}
+
+{# toc topic #}
+
+{% topic_toc collections, topic, lang %}
+
+{% nav_section 'Other topics', 'topics' %}
+  {% topics topic %}
+{% endnav_section %}

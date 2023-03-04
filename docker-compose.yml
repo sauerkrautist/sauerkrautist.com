@@ -1,0 +1,12 @@
+version: "3.6"
+services:
+  sauerkrautist:
+    build:
+      context: .
+      target: install
+    container_name: sauerkrautist
+    tty: true
+    volumes:
+      - ./config:/home/node/config
+      - ./source:/home/node/workspace/source
+    working_dir: /home/node/workspace

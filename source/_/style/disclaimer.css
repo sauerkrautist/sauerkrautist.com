@@ -1,0 +1,43 @@
+body > details {
+	box-sizing: border-box;
+	margin: 0;
+	padding: var(--half) var(--measure);
+	color: var(--details-fg);
+	background-color: var(--details-bg);
+	font: var(--guisize)/var(--leading) var(--guifont);
+}
+
+body > details:focus-within {
+	outline: 4px solid var(--foreground);
+	outline-offset: 4px;
+	border-color: var(--foreground);
+}
+
+body > details p {
+	margin: 0;
+}
+
+body > details[open] summary {
+	margin-bottom: 0.5rem;
+}
+
+body > details :last-child {
+	margin-bottom: 0.25rem;
+}
+
+summary {
+	cursor: pointer;
+	color: var(--summary-fg);
+	background: transparent;
+	font-weight: bold;
+}
+
+summary:is(:hover, :focus)::after {
+	content: ' 💀';
+}
+
+summary:focus {
+	border-radius: 0.1rem;
+	outline: 2px solid transparent;
+	outline-offset: 0.1em;
+}

@@ -1,0 +1,3 @@
+ol ol > li::marker {
+	content: "(" counter(list-item) ") ";
+}

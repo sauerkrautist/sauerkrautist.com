@@ -1,0 +1,39 @@
+html {
+	scrollbar-gutter: stable;
+	color: var(--foreground);
+	background: var(--background);
+	font: var(--scale)/var(--leading) var(--font);
+}
+
+main {
+	color: var(--foreground-main, inherit);
+	background: var(--background-main, transparent);
+}
+
+a[href] {
+	border-radius: 0.01em;
+	color: var(--highlight);
+	background: transparent;
+	text-decoration-color: var(--foreground);
+	text-underline-offset: 0.3em;
+	text-decoration-thickness: 1px;
+	outline: 0.1rem solid transparent;
+}
+
+a[href]:hover {
+	color: var(--foreground);
+	background: transparent;
+	text-decoration: none;
+}
+
+a[href]:focus-visible {
+	outline-color: var(--foreground);
+	outline-offset: var(--outline-offset);
+	text-decoration-color: transparent;
+}
+
+@media only screen and (prefers-reduced-motion: no-preference) {
+	a[href] {
+		transition: all 200ms ease-in-out;
+	}
+}

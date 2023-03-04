@@ -1,0 +1,221 @@
+:root {
+	--content-bg: var(--background);
+	--details-fg: var(--background);
+	--details-bg: var(--foreground);
+	--summary-fg: var(--background);
+	--hr-border: #e6e6e6;
+	--page-bg: #f9f9f9;
+	--shadow: #ddd;
+	--indent: 3rem;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+	:root {
+		--foreground: #eee;
+		--foreground-main: var(--foreground);
+		--background: #000;
+		--target: #444;
+		--highlight: #fff;
+
+		--content-bg: #111;
+		--details-fg: var(--foreground);
+		--details-bg: #333;
+		--summary-fg: var(--highlight);
+		--hr-border: #555;
+		--page-bg: #555;
+		--shadow: #333;
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--content-bg);
+}
+
+body > nav {
+	--offset: 0.7rem;
+	top: var(--offset);
+	right: var(--offset);
+}
+
+body > nav a[href] {
+	background-color: var(--background);
+}
+
+body > nav a[href]:is(:hover, :focus) {
+	outline-width: 2px;
+	outline-color: var(--background);
+	outline-offset: 4px;
+	background-color: var(--background);
+}
+
+body > details {
+	box-sizing: border-box;
+	margin: 0;
+	padding: var(--half) var(--measure);
+	color: var(--details-fg);
+	background-color: var(--details-bg);
+	font: var(--guisize)/var(--leading) var(--guifont);
+}
+
+body > details:focus-within {
+	outline: 4px solid var(--foreground);
+	outline-offset: 4px;
+	border-color: var(--foreground);
+}
+
+body > details p {
+	margin: 0;
+}
+
+body > details[open] summary {
+	margin-bottom: 0.5rem;
+}
+
+body > details :last-child {
+	margin-bottom: 0.25rem;
+}
+
+summary {
+	cursor: pointer;
+	color: var(--summary-fg);
+	background: transparent;
+	font-weight: bold;
+}
+
+summary:is(:hover, :focus)::after {
+	content: ' 💀';
+}
+
+summary:focus {
+	border-radius: 0.1rem;
+	outline: 2px solid transparent;
+	outline-offset: 0.1em;
+}
+
+main {
+	padding: 0 1rem 2rem;
+}
+
+main > div:first-child {
+	text-align: center;
+}
+
+main > header {
+	margin: 0 0 var(--measure);
+	font: var(--guisize)/var(--leading) var(--guifont);
+}
+
+main > header p {
+	margin: var(--half) 0;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid var(--foreground);
+}
+
+center {
+	margin: var(--half) 0;
+}
+
+main > :is(header, h1, h1 + p) {
+	text-align: center;
+}
+
+h1 {
+	margin: var(--half) 0;
+	text-align: center;
+	font-size: inherit;
+}
+
+h2 {
+	text-align: center;
+	font-weight: bold;
+	font-size: inherit;
+}
+
+h3 {
+	margin: var(--measure) 0;
+	font-weight: normal;
+	font-style: italic;
+	font-size: inherit;
+}
+
+h4 {
+	margin: 0;
+	text-indent: var(--indent);
+	font-weight: normal;
+	font-style: italic;
+	font-size: inherit;
+}
+
+h4 + p {
+	text-indent: var(--indent);
+}
+
+main p {
+	margin: 0;
+}
+
+main p + p {
+	text-indent: var(--indent);
+}
+
+main header p {
+	text-indent: 0;
+}
+
+main > footer ol {
+	margin: 0 0 0 1.2rem;
+	padding: 0;
+}
+
+.pyramid {
+	margin: var(--measure) 0;
+	padding: 0;
+}
+
+@media only screen and (min-width: 44rem) {
+	html {
+		height: 100%;
+		padding: 0 3rem;
+		background-color: var(--page-bg);
+	}
+
+	body {
+		min-height: 100%;
+		max-width: 40rem;
+		margin-inline: auto;
+		padding: 0;
+		box-shadow: 0.25rem 0 1.5em var(--shadow);
+	}
+
+	body > nav {
+		position: fixed;
+	}
+
+	body > nav a[href] {
+		background-color: transparent;
+	}
+
+	body > nav a[href]:is(:hover, :focus) {
+		outline-color: var(--foreground);
+	}
+
+	body > details {
+		margin: 0;
+		padding-inline: 2rem;
+	}
+
+	main {
+		--gutter: 2rem;
+		padding: var(--half) var(--gutter) calc(var(--measure) * 2);
+	}
+
+	main > hr {
+		margin: var(--measure) calc(var(--gutter) * -1);
+		border-top: 2px solid var(--hr-border);
+	}
+}

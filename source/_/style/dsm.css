@@ -1,0 +1,36 @@
+h1,
+h1 + section,
+h2,
+h3,
+caption,
+th {
+	font-family: var(--guifont);
+}
+
+h1 {
+	margin: 0;
+	font-size: 1.5rem;
+}
+
+h2 {
+	margin: 1.5rem 0 0 0;
+	text-align: left;
+	font-size: 1.2rem;
+}
+
+main p + p {
+	text-indent: 2rem;
+}
+
+dd {
+	margin: 0 0 0 1.5rem;
+}
+
+section[aria-labelledby="diagnostic-criteria"] ol {
+	margin: 0 0 0 1.5rem;
+	padding: 0;
+}
+
+section[aria-labelledby="diagnostic-criteria"] > ol {
+	list-style: upper-alpha;
+}

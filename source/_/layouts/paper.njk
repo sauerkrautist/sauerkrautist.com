@@ -1,0 +1,27 @@
+---
+eleventyComputed:
+  pagetitle: "{{ title | text }} | {{ name }}"
+layout: blank.njk
+script:
+  - details
+css:
+  - endnotes
+  - paper
+---
+
+{% set lang_override = lang_default if lang !== lang_default %}
+
+{% details 'Generic disclaimer', {
+  lang: lang_override,
+  data: {
+    name: 'pub-disclaimer'
+  },
+  open: true
+} %}
+  This page reproduces the entirety of a short or excerpts of a long historical publication in its original language. It can contain any combination of uncommented offensive **eugenicist**, **misogynist** & **racist** views that were promoted by mainstream academia at the time.
+  Given that psychiatry has established itself as the antonym of accountability in the previous one hundred years, this content is provided for members of the autistic community who feel left to their own devices in their pursue of a more comprehensive understanding of their public identity and history. The included material might contain technical and editorial errors and is not fit for citation in any other context than outlined above. Print matter footnotes have been consolidated to bidirectional interactive endnotes to improve readability and usability.
+{% enddetails %}
+
+<main>
+  {{ content | safe }}
+</main>

@@ -1,0 +1,11 @@
+:root {
+	--1: hsl(0 0% 0%);
+	--2: hsl(0 0% 72.5%);
+	--3: hsl(0 0% 100%);
+	--4: hsl(91.9 83.7% 73.5%);
+
+	--i: calc(100vh / 7);
+	--bg-height: calc(var(--i) * 6);
+	/* FIXME */
+	--bg-image: linear-gradient(to bottom, var(--1) 0, var(--1) var(--i), var(--2) var(--i), var(--2) calc(var(--i) * 2), var(--3) calc(var(--i) * 2), var(--3) calc(var(--i) * 3), var(--4) calc(var(--i) * 3), var(--4) calc(var(--i) * 4), var(--3) calc(var(--i) * 4), var(--3) calc(var(--i) * 5), var(--2) calc(var(--i) * 5));
+}

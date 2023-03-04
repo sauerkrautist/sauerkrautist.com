@@ -1,0 +1,14 @@
+nav[aria-labelledby="topics"] ul {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 1.4rem;
+	row-gap: var(--half);
+}
+
+nav[aria-labelledby="topics"] ul li {
+	white-space: nowrap;
+}
+
+nav[aria-labelledby="topics"] ul {
+	list-style: square;
+}

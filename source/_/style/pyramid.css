@@ -1,0 +1,8 @@
+ul.pyramid {
+	margin-left: 0;
+}
+
+ul.pyramid,
+ul.pyramid ul {
+	list-style: none;
+}

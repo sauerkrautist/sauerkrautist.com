@@ -1,0 +1,23 @@
+:root {
+	--1: rgb(228 3 3);
+	--2: rgb(255 237 0);
+	--3: rgb(255 140 0);
+	--4: rgb(0 128 38);
+	--5: rgb(0 77 255);
+	--6: rgb(117 7 135);
+
+	--i: calc(var(--bg-height) / 6);
+
+	--bg-image: linear-gradient(to bottom,
+			var(--1) 0,
+			var(--1) var(--i),
+			var(--2) var(--i),
+			var(--2) calc(var(--i) * 2),
+			var(--3) calc(var(--i) * 2),
+			var(--3) calc(var(--i) * 3),
+			var(--4) calc(var(--i) * 3),
+			var(--4) calc(var(--i) * 4),
+			var(--5) calc(var(--i) * 4),
+			var(--5) calc(var(--i) * 5),
+			var(--6) calc(var(--i) * 5));
+}

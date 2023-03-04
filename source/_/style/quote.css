@@ -1,0 +1,36 @@
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+blockquote {
+	margin: var(--measure) 0;
+	border-left: 2px solid var(--foreground);
+	padding: 0 0 0 var(--measure);
+}
+
+figure blockquote {
+	margin-bottom: 0;
+}
+
+main > footer blockquote {
+	margin: 0;
+}
+
+blockquote + figcaption {
+	margin-bottom: var(--measure);
+	text-align: right;
+}
+
+blockquote + figcaption span {
+	--border: 2px;
+	--x: calc(var(--border) / 2);
+	display: inline-block;
+	margin: var(--half) calc(var(--gutter) * -1) 0 0;
+	padding: calc(var(--half) - var(--border)) var(--gutter) 0 0;
+	border-top: var(--border) dotted var(--foreground);
+}
+
+blockquote > div {
+	margin: var(--measure) 0;
+}

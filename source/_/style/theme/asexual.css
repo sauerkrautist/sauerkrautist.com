@@ -1,0 +1,17 @@
+:root {
+	--1: hsl(0 0% 0%);
+	--2: hsl(0 0% 63.9%);
+	--3: hsl(0 0% 100%);
+	--4: hsl(300 100% 25.1%);
+
+	--i: calc(var(--bg-height) / 4);
+
+	--bg-image: linear-gradient(to bottom,
+			var(--1) 0,
+			var(--1) var(--i),
+			var(--2) var(--i),
+			var(--2) calc(var(--i) * 2),
+			var(--3) calc(var(--i) * 2),
+			var(--3) calc(var(--i) * 3),
+			var(--4) calc(var(--i) * 3));
+}

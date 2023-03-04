@@ -1,0 +1,250 @@
+html {
+	height: 100%;
+}
+
+body {
+	box-sizing: border-box;
+	max-width: var(--pagewidth);
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	margin: 0;
+	padding: var(--measure) var(--gutter);
+	color: inherit;
+	background-color: inherit;
+}
+
+body > header,
+body > footer {
+	font: var(--guisize)/var(--leading) var(--guifont);
+}
+
+body > footer {
+	margin: 2.25rem calc(var(--gutter) * -1) 0 0;
+	border-top: 2px solid var(--foreground);
+	padding: var(--half) var(--gutter) var(--half) 0;
+	text-align: center;
+}
+
+body > header a:first-child svg {
+	width: 8em;
+	height: auto;
+	vertical-align: bottom;
+}
+
+body > header nav {
+	margin: var(--measure) 0;
+}
+
+main {
+	min-height: 100%;
+}
+
+h1 {
+	margin: var(--measure) calc(var(--gutter) * -1) var(--half);
+	margin: 0 calc(var(--gutter) * -1) var(--half);
+	border-bottom: 2px solid var(--foreground);
+	padding: var(--half) var(--gutter);
+	font: var(--measure)/1.2 var(--guifont);
+}
+
+h1,
+h2#endnotes {
+	border-image: linear-gradient(to right,
+			var(--foreground),
+			var(--foreground) var(--h1-line),
+			transparent var(--h1-line)) 1 !important;
+}
+
+h1 + div {
+	margin: var(--half) 0 var(--measure) 0;
+	font: var(--guisize)/var(--leading) var(--guifont);
+}
+
+h1 + div::before {
+	content: '👉 ';
+}
+
+h2 {
+	margin: var(--half) calc(var(--gutter) * -1) var(--half);
+	border-bottom: 2px solid var(--foreground);
+	border-image: linear-gradient(to right,
+			var(--foreground),
+			var(--foreground) var(--h2-line),
+			transparent var(--h2-line)) 1;
+	padding: var(--half) var(--gutter);
+	font: 1.2rem/1.2 var(--guifont);
+}
+
+h3 {
+	margin: var(--half) calc(var(--gutter) * -1) 0.5em;
+	border-bottom: 2px solid var(--foreground);
+	padding: var(--half) var(--gutter);
+	border-image: linear-gradient(to right,
+			var(--foreground),
+			var(--foreground) var(--h3-line),
+			transparent var(--h3-line)) 1;
+	font: 1rem var(--guifont);
+}
+
+p {
+	margin: 0;
+}
+
+p + p {
+	text-indent: var(--measure);
+}
+
+ol,
+ul {
+	margin: var(--measure) 0 var(--measure) 1em;
+	padding: 0;
+}
+
+:is(h2, h3) + :is(ol, ul),
+:is(h2, h3) + nav > :is(ol, ul) {
+	margin-top: 0;
+}
+
+main > footer ol {
+	margin: var(--half) 0 0 var(--measure);
+}
+
+li :is(ol, ul) {
+	margin: 0 0 0 var(--measure);
+}
+
+main > footer > ol ul {
+	margin: 0;
+}
+
+ul a[href] {
+	outline-offset: 0.3em !important;
+}
+
+small {
+	font-size: 0.8em;
+}
+
+sup {
+	line-height: 1;
+}
+
+a[href$="#topics"] {
+	position: relative;
+	font: var(--guisize)/var(--leading) var(--guifont);
+}
+
+a[href$="#topics"]::before {
+	content: '👈';
+	position: absolute;
+	left: -1.3em;
+	padding-top: 0.15em;
+}
+
+body > header > a[href]:first-child g path {
+	transition: all 300ms ease-in-out;
+}
+
+body > header > a[href]:first-child:is(:hover, :focus) g path:first-child {
+	fill: var(--highlight);
+}
+
+body > header > a[href]:first-child:is(:hover, :focus) g path:last-child {
+	fill: var(--foreground);
+}
+
+body > header > a[href]:first-child:is(:hover, :focus) g ~ path {
+	fill: transparent !important;
+}
+
+body > footer a[href]:hover {
+	position: relative;
+}
+
+/* Header layout & hanging indent threshold */
+@media only screen and (min-width: 30rem) {
+	body {
+		margin: 0 1rem;
+	}
+
+	body > header {
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+	}
+
+	body > header nav {
+		margin: 0;
+	}
+
+	h1 {
+		margin-top: var(--measure);
+	}
+
+	h1 + div {
+		display: list-item;
+	}
+
+	h1 + div::marker {
+		content: '👉 ';
+	}
+
+	h1 + div::before {
+		content: none;
+	}
+
+	ol,
+	ul {
+		margin: var(--measure) 0;
+		padding: 0;
+	}
+
+	:is(h2, h3) + :is(ol, ul) {
+		margin-top: 0;
+	}
+
+	main > footer ol {
+		margin-left: 0;
+	}
+
+	li :is(ol, ul) {
+		margin-left: var(--measure);
+	}
+}
+
+/* Max layout threshold
+ * ===
+ *  Magic numbers in custom properties:
+ *  38rem  in --pagewidth
+ *  0.35vw in --scale
+ * ===
+ *  38rem page width
+ *  + 2 * 1.5rem gutter
+ *  + 2 * 1 rem margin
+ *  = 43rem
+ *  Scale:
+ *  43rem * ((43rem / 100) * 0.35vw)
+ *  = 6.4715
+ */
+@media only screen and (min-width: 49.4715rem) {
+	html {
+		--bg-size: calc(50% - (var(--pagewidth) / 2));
+
+		background-repeat: repeat-y;
+		background-attachment: fixed;
+		background-position: top right;
+		background-size: var(--bg-size) var(--bg-height);
+		background-image: var(--bg-image);
+	}
+
+	body {
+		margin: 0 auto;
+		border-right: 2px solid var(--foreground);
+		padding: var(--measure) var(--gutter);
+	}
+
+	h1 {
+		font-size: 1.8rem;
+	}
+}

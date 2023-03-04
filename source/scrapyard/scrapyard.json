@@ -1,0 +1,12 @@
+{
+	"layout": "paper.njk",
+	"link": "/!/",
+	"tags": [
+		"Pathology",
+		"Psychiatry",
+		"Scrapyard"
+	],
+	"eleventyComputed": {
+		"permalink": "/!/{{ page.fileSlug }}/"
+	}
+}

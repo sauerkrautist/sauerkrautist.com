@@ -1,0 +1,92 @@
+@media only screen and (prefers-reduced-motion: no-preference) {
+	@keyframes target {
+		from {
+			border-radius: 0.2em;
+			outline-offset: 10rem;
+			outline-width: 2rem;
+			outline-color: transparent;
+			background-color: transparent;
+		}
+
+		15% {
+			background-color: transparent;
+		}
+
+		25% {
+			outline-color: var(--target-outline);
+			outline-offset: -2px;
+			outline-width: 2px;
+			text-decoration-color: transparent;
+		}
+
+		35% {
+			background-color: var(--target-highlight);
+		}
+
+		50% {
+			background-color: var(--target-highlight);
+		}
+
+		65% {
+			outline-color: transparent;
+		}
+	}
+
+	@keyframes reftarget {
+		from {
+			outline-offset: 10rem;
+			outline-width: 1rem;
+			outline-color: transparent;
+			background-color: transparent;
+		}
+
+		15% {
+			background-color: transparent;
+		}
+
+		25% {
+			outline-color: var(--target-outline);
+			outline-offset: var(--outline-offset);
+			outline-width: 2px;
+			text-decoration-color: transparent;
+		}
+
+		75% {
+			text-decoration-color: transparent;
+		}
+
+		100% {
+			outline-color: var(--reftarget-end-outline-color);
+			outline-offset: var(--outline-offset);
+			text-decoration-color: var(--reftarget-end-decoration-color);
+		}
+	}
+
+	:target {
+		--duration: 3s;
+	}
+
+	#main:target h1,
+	:target:not(#main, a[href][aria-labelledby^="aria-endnote "]) {
+		animation-duration: var(--duration);
+		animation-name: target;
+		transition: all;
+		border-radius: 0.2em;
+		outline-offset: 0;
+		outline: 2px solid transparent;
+	}
+
+	#main:target h1,
+	h2:target,
+	h3:target {
+		outline-offset: -2px;
+		/* TODO clean up border radius usage */
+		border-radius: 0.2em 0 0 0 !important;
+	}
+
+	a[aria-labelledby^="aria-endnote "]:target {
+		animation-duration: var(--duration);
+		animation-name: reftarget;
+		transition: all;
+	}
+}

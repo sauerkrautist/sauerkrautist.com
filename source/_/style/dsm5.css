@@ -1,0 +1,49 @@
+h1 {
+	text-align: right !important;
+}
+
+h1 + section {
+	border: solid var(--foreground);
+	border-width: 2px 0;
+}
+
+h1 + section > header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 0 0.5rem;
+	border-bottom: 2px solid var(--foreground);
+	padding: 0.2rem 0;
+}
+
+h1 + section > header h2 {
+	margin: 0;
+	font-weight: normal;
+}
+
+h1 + section > header :last-child {
+	font-weight: bold;
+}
+
+h3,
+h3 + p {
+	display: inline;
+}
+
+h3 {
+	margin: 0 1rem 0 0;
+	font-weight: bold;
+	font-size: var(--guisize);
+}
+
+main > div {
+	margin: 0.75rem 0;
+}
+
+.attachment {
+	margin-block: var(--measure);
+	padding-block: var(--half);
+	background-color: var(--details-bg);
+	text-align: center;
+	font: var(--guisize)/var(--leading) var(--guifont);
+}

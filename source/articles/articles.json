@@ -1,0 +1,9 @@
+{
+	"theme": "agender",
+	"tags": [
+		"articles"
+	],
+	"eleventyComputed": {
+		"permalink": "/{{ page.fileSlug }}/"
+	}
+}

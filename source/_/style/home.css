@@ -1,0 +1,119 @@
+html {
+	height: 100%;
+}
+
+body {
+	box-sizing: border-box;
+	min-height: 100%;
+	margin: 0;
+	padding: var(--measure) var(--measure) calc(var(--measure) * 2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	margin: 0;
+	font-weight: normal;
+}
+
+h1 svg {
+	width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+h1 small {
+	position: relative;
+	display: block;
+	margin: 0.25em 0.1em 0.85em 0.05em;
+	text-align: center;
+	font-style: italic;
+	font-size: calc(1rem + 2.5vw);
+}
+
+h1 small a[href] {
+	--size: 1.8em;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: var(--size);
+	height: var(--size);
+	position: relative;
+	top: -0.3rem;
+	border-radius: 50%;
+	vertical-align: super;
+	font: bold 0.55em/0 var(--guifont);
+}
+
+h1 ~ nav {
+	border-top: 0.15rem solid var(--foreground);
+	padding: 0.25em 0;
+	text-align: center;
+	font-size: 1rem;
+}
+
+h1 ~ nav > span {
+	padding: 0 0.5em;
+	background: var(--background);
+}
+
+a[href] {
+	text-decoration: none;
+}
+
+@media only screen and (min-width: 34rem) {
+	h1 {
+		margin: 0 -0.1em 0 -0.06em;
+	}
+
+	h1 small {
+		font-size: 2.5rem;
+	}
+
+	h1 small a[href] {
+		position: absolute;
+		top: 0em;
+		right: -1.8em;
+		font-size: 1rem;
+	}
+
+	h1 ~ nav {
+		--height: 0.08rem;
+		border: none;
+		background: linear-gradient(180deg,
+				rgba(0, 0, 0, 0) calc(50% - var(--height)),
+				var(--foreground) calc(50% - var(--height)),
+				var(--foreground) calc(50% + var(--height)),
+				rgba(0, 0, 0, 0) calc(50% + var(--height)));
+		line-height: 1;
+		font-size: 1.1rem;
+	}
+
+	@media only screen and (prefers-reduced-motion: no-preference) {
+		@keyframes woosh {
+			0% {
+				transform: scale(0, 0);
+				color: var(--foreground);
+			}
+
+			20% {
+				transform: scale(0, 0) rotate(-180deg);
+				color: var(--foreground);
+			}
+
+			65% {
+				transform: scale(1.2, 1.2);
+				color: var(--foreground);
+			}
+		}
+
+		h1 small:not(:target) a[href] {
+			animation-name: woosh;
+			animation-duration: 1.5s;
+			animation-timing-function: ease-in-out;
+			transform-origin: 50% 50%;
+			transform: scale(1, 1);
+		}
+	}
+}

@@ -1,0 +1,54 @@
+---
+title: The sitemap
+theme: trans
+cn:
+  - This website is still work without progress.
+css:
+  - topics
+permalink: /*/
+---
+
+{% nav_section 'The articles' %}
+  {% toc 'articles' %}
+{% endnav_section %}
+
+<h2 id="scrapyard">The scrapyard</h2>
+
+<p>
+  An archeological excavation site for autistic historians who like to dig for artefacts in psychiatry's toxic waste.
+  Not ({% caps 'NOT' %} (!){% ref 'not' %}) for the faint of heart.
+  Put yer hazmat suit on and
+  <a href="/!/">enter at own risk</a>.
+</p>
+
+{% nav_section 'The topics', 'topics' %}
+  {% topics %}
+{% endnav_section %}
+
+{% nav_section 'The bike shed' %}
+  {% toc 'Bike-shedding' %}
+{% endnav_section %}
+
+{% set heading %}
+  The End {% caps 'NOT' %}(!)s
+  {%- ref "issue" %}
+{% endset %}
+
+{% set NOT %}
+  {% caps 'NOT' %}
+{% endset %}
+
+{% endnotes heading %}
+  {% note 'not' %}
+    {% citation {
+      title: [
+        NOT + " operator",
+        "https://en.wiktionary.org/wiki/NOT_operator"
+      ],
+      context: "Wiktionary: The free dictionary"
+    } %}
+  {% endnote %}
+  {% note 'issue' %}
+    Using the {% caps 'NOT' %} (!) operator is not ({% caps 'NOT' %} (!)) interpunction and therefore we consider it [good autistic style](/styleguide/#interpunction).
+  {% endnote %}
+{% endendnotes %}

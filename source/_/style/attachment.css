@@ -1,0 +1,95 @@
+:root {
+	--inset: 0.5rem;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+	:root {
+		--foreground: #eee;
+		--foreground-main: var(--foreground);
+		--background: #111;
+		--target: #444;
+		--highlight: #fff;
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0 1rem;
+}
+
+body > :is(nav, main, div) {
+	box-sizing: border-box;
+	max-width: 60rem;
+	margin: 0 auto;
+}
+
+body > :is(nav, div) {
+	padding: var(--measure) var(--inset);
+}
+
+main + div {
+	text-align: right;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-bottom: 2px solid var(--foreground);
+}
+
+caption {
+	border-block: 3px solid var(--foreground);
+	text-align: left;
+	font-weight: bold;
+}
+
+body > nav,
+main + div,
+caption,
+th {
+	font: var(--guisize)/var(--leading) var(--guifont);
+}
+
+caption,
+th,
+td {
+	padding: 0.2rem var(--inset);
+}
+
+thead th {
+	vertical-align: bottom;
+	border-bottom: 2px solid var(--foreground);
+	white-space: nowrap;
+	text-align: left;
+}
+
+tbody th {
+	padding-block: 0.3rem;
+}
+
+tbody th,
+tbody td {
+	vertical-align: top;
+	text-align: left;
+}
+
+th {
+	font-weight: normal;
+	font-size: var(--guisize);
+}
+
+td {
+	min-width: 20rem;
+}
+
+td p {
+	--offset: 0.5rem;
+	margin: 0 0 0 var(--offset);
+	text-indent: calc(var(--offset) * -1);
+}
+
+@media only screen and (min-width: 75rem) {
+	tbody th {
+		white-space: nowrap;
+	}
+}

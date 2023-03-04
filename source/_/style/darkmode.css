@@ -1,0 +1,28 @@
+@media only screen and (prefers-color-scheme: dark) {
+	:root {
+		--bg-a: 0.2;
+
+		--blue-h: 201.1;
+		--yellow-h: 50.8;
+		--pink-h: 331.1;
+
+		--1: hsl(var(--blue-h) 100% 56.5% / var(--bg-a));
+		--2: hsl(var(--yellow-h) 100% 50% / var(--bg-a));
+		--3: hsl(var(--pink-h) 100% 56.5% / var(--bg-a));
+
+		--bg-height: 100vh;
+		--i: calc(var(--bg-height) / 3);
+		/* FIXME */
+		--bg-image: linear-gradient(to bottom, var(--1) 0, var(--1) var(--i), var(--2) var(--i), var(--2) calc(var(--i) * 2), var(--3) calc(var(--i) * 2));
+
+		--foreground: hsl(var(--blue-h) 100% 72%);
+		--foreground-main: #ddd;
+		--background: #111;
+
+		--highlight: hsl(var(--pink-h) 100% 72%);
+
+		--target: hsl(var(--yellow-h) 100% 9%);
+		--target-highlight: hsl(var(--yellow-h) 100% 17%);
+		--target-outline: hsl(var(--blue-h) 100% 56.5%);
+	}
+}

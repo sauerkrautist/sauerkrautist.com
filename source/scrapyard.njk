@@ -1,0 +1,51 @@
+---
+title: The psychiatric scrapyard
+theme: genderqueer
+permalink: /!/
+---
+
+<p>
+  Abandon hope, all ye who enter here.
+  {%- ref 'hell' %}
+  The half-life time of psychiatric junk is to autistics what racing Zeno's tortoise is to Achilles.
+  {%- ref 'tortoise' %}
+</p>
+<p>
+  This is also a fool's gold mine for autistic Halloween theme parties.
+</p>
+
+{# FIXME: Not reusing the generated ID from nav_section in the toc is bad autistic style!!! #}
+
+{% nav_section 'The classist classics' %}
+  {% toc 'Scrapyard', 'classist-classics' %}
+{% endnav_section %}
+
+{% nav_section 'The moderated modernists' %}
+  {% toc 'Scrapyard', 'moderated-modernists' %}
+{% endnav_section %}
+
+{% endnotes 'End-of-life notes' %}
+  {% note 'hell' %}
+    {% citation {
+      author: 'Dante Alighieri',
+      title: [
+        'Inferno',
+        'https://www.gutenberg.org/cache/epub/1012/pg1012-images.html#inferno'
+      ],
+      context: 'Divina Commedia',
+      year: 1321
+    } %}
+    <br>
+    Inscription on the entry sign above Dante's literary gates of literal hell. Entirely unrelated to
+    [Sartre's hell](/hell/).
+  {% endnote %}
+  {% note 'tortoise' %}
+    {% citation {
+      title: [
+        'Achilles and the tortoise',
+        'https://en.wikipedia.org/wiki/Zeno%27s_paradoxes#Achilles_and_the_tortoise'
+      ],
+      context: 'Wikipedia: Zeno’s paradoxes'
+    } %}
+  {% endnote %}
+{% endendnotes %}

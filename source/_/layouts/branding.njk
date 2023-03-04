@@ -1,0 +1,17 @@
+---
+layout: root.njk
+css:
+  - darkmode
+---
+
+{{ content | safe }}
+
+<div hidden>
+  <p id="aria-logotype">
+    Logotype: sauerkrautist, a portmanteau of Sauerkraut and Autist
+  </p>
+  {% for id, content in aria %}
+    <p id="aria-{{ id }}">{{ content }}</p>
+  {% endfor %}
+  {% ref_targets %}
+</div>

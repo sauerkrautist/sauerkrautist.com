@@ -1,0 +1,31 @@
+---
+layout: home.njk
+eleventyComputed:
+  title: "{{ name }}"
+permalink: /
+css:
+  - target
+---
+
+<h1>
+  {% include 'logotype.svg' %}
+  <br>
+  <small id="hell">
+  {{ catchphrase }}
+    <a
+      href="/hell/"
+      id="aria-nan"
+      aria-labelledby="aria-nan aria-endnan"
+    >NaN</a>
+  </small>
+</h1>
+
+<nav>
+  <span>
+    {% nav %}
+  </span>
+</nav>
+
+<p hidden id="aria-endnan">
+  – not a number, but not a note anyway
+</p>

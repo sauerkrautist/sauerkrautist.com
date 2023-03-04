@@ -1,0 +1,39 @@
+{
+  "scripts": {
+    "prebuild": "rm -rf docs/*",
+    "build": "NODE_ENV='production' eleventy --config source/_/config.js",
+    "prestart": "rm -rf docs/*",
+    "start": "DEBUG=Eleventy:EleventyErrorHandler,sauerkrautist eleventy --serve --incremental --config source/_/config.js",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "eslint": "^8.29.0",
+    "html-minifier-terser": "^7.1.0",
+    "lodash.kebabcase": "^4.1.1",
+    "unidecode": "^0.1.8"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": "latest"
+    },
+    "rules": {
+      "complexity": [
+        "error",
+        3
+      ],
+      "max-depth": [
+        "error",
+        2
+      ],
+      "max-statements": [
+        "error",
+        9
+      ]
+    }
+  }
+}

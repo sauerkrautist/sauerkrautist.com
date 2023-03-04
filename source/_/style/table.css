@@ -1,0 +1,57 @@
+table {
+	width: 100%;
+	margin: var(--measure) 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+main > footer table {
+	width: auto;
+	margin: 0;
+}
+
+h2 + table {
+	margin-top: 1rem;
+}
+
+caption {
+	margin: 0;
+	border-bottom: 1px solid var(--foreground);
+	padding: 0 0 0.25rem;
+	text-align: left;
+	font: var(--guisize)/var(--leading) var(--guifont);
+}
+
+caption h2 {
+	margin: 0 0 1.1rem;
+}
+
+thead th,
+tbody tr:not(:last-of-type) th,
+tbody tr:not(:last-of-type) td {
+	border-bottom: 1px solid var(--foreground);
+}
+
+thead th:not(:first-child) {
+	text-align: left;
+}
+
+tr > *:not(:last-child) {
+	border-right: 1px solid var(--foreground);
+}
+
+th,
+td {
+	padding: 0 0.5em;
+}
+
+th {
+	text-align: left;
+	font-weight: normal;
+	font-style: italic;
+}
+
+th:first-child {
+	text-align: right;
+	padding-left: 0;
+}

@@ -1,0 +1,21 @@
+---
+layout: root.njk
+eleventyComputed:
+  pagetitle: "{{ title }} | {{ name }}"
+css:
+  - root
+  - darkmode
+  - attachment
+---
+
+<nav>
+  {% breadcrumbs crumbs %}
+</nav>
+
+<main>
+  {{ content | safe }}
+</main>
+
+<div>
+  {% breadcrumbs crumbs %}
+</div>

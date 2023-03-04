@@ -1,0 +1,11 @@
+:root {
+	--blue: hsl(196.6 94.1% 66.9%);
+	--pink: hsl(348.2 79.2% 81.2%);
+	--white: rgb(255 255 255);
+
+	--bg-height: 80vh;
+	--i: calc(var(--bg-height) / 4);
+
+	/* FIXME */
+	--bg-image: linear-gradient(to bottom, var(--blue) 0, var(--blue) var(--i), var(--pink) var(--i), var(--pink) calc(var(--i) * 2), var(--white) calc(var(--i) * 2), var(--white) calc(var(--i) * 3), var(--pink) calc(var(--i) * 3));
+}

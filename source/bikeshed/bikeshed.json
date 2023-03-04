@@ -1,0 +1,9 @@
+{
+	"theme": "agender",
+	"tags": [
+		"Bike-shedding"
+	],
+	"eleventyComputed": {
+		"permalink": "/{{ page.fileSlug }}/"
+	}
+}

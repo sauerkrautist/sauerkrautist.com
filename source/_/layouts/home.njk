@@ -1,0 +1,16 @@
+---
+layout: branding.njk
+css:
+  - root
+  - layout
+  - home
+links:
+  - rel: me
+    href: "https://autistics.life/@sauerkrautist"
+eleventyComputed:
+  pagetitle: "{{ title }} | {{ catchphrase }}"
+---
+
+<main>
+  {{ content | safe }}
+</main>

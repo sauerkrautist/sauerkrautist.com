@@ -1,0 +1,17 @@
+const attributes_to_string = require('../html/attributes');
+const markdown = require('../markdown');
+
+module.exports = element;
+
+function element(content, summary, attribute_map) {
+	const attributes = attribute_map
+		? attributes_to_string(attribute_map)
+		: '';
+
+	return `
+		<details ${attributes}>
+			<summary>${summary}</summary>
+			${markdown.render(content)}
+		</details>
+	`;
+}

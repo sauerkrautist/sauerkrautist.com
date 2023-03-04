@@ -1,0 +1,24 @@
+a[href][aria-labelledby^="aria-endnote "] {
+	--size: 1em;
+	--reftarget-end-outline-color: transparent;
+	--reftarget-end-decoration-color: var(--foreground);
+	box-sizing: border-box;
+	display: inline-flex;
+	width: var(--size);
+	height: var(--size);
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	margin: 0 0 0 0.1em;
+	padding: 0.05em 0 0;
+	vertical-align: super;
+	text-indent: 0;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.2em;
+	font: bold 0.7rem/0 var(--guifont);
+}
+
+a[href][aria-labelledby^="aria-endnote "]:focus-visible {
+	--reftarget-end-outline-color: var(--foreground);
+	--reftarget-end-decoration-color: transparent;
+}

@@ -1,0 +1,17 @@
+{
+	"name": "sauerkrautist",
+	"dockerComposeFile": [],
+	"service": "sauerkrautist",
+	"shutdownAction": "stopCompose",
+	"workspaceFolder": "/home/node/workspace",
+	"customizations": {
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"editorconfig.editorconfig",
+				"stylelint.vscode-stylelint"
+			]
+		}
+	}
+}

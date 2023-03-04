@@ -1,0 +1,6 @@
+/* bold body copy considered silly */
+main p b,
+main p strong {
+	letter-spacing: 0.02em;
+	font: bold 0.92rem "Comic Sans MS", "Chalkboard SE", cursive;
+}

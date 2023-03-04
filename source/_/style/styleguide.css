@@ -1,0 +1,3 @@
+var {
+	font: bold var(--guisize)/var(--leading) var(--guifont);
+}

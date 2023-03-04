@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,{{ favicon }}">
+  <title>{{ pagetitle | text }}</title>
+  <meta
+    name="theme-color"
+    content="#bd0000"
+    media="(prefers-color-scheme: light)"
+  >
+  <meta
+    name="theme-color"
+    content="#41152a"
+    media="(prefers-color-scheme: dark)"
+  >
+  <meta name="description" content="{{ description }}">
+  {% for link in links %}
+    <link {% for name, value in link %} {{ name }}="{{ value }}"{% endfor %}>
+  {% endfor %}
+  {% if script %}
+    {% set js %}
+      {% for base in script %}
+        {% include ['script/', base, '.js' ] | join %}
+      {% endfor %}
+    {% endset %}
+    <script type="module">
+      {{ js | safe }}
+    </script>
+  {% endif %}
+  {% set style %}
+    {% include 'style/properties.css' %}
+    {% if theme %}
+      {% include ['style/theme/', theme, '.css'] | join %}
+    {% endif %}
+    {% for base in css %}
+      {% include ['style/', base, '.css'] | join %}
+    {% endfor %}
+    {% if style %}
+      {{ style }}
+    {% endif %}
+  {% endset %}
+  <style>
+    {{ style | safe }}
+  </style>
+</head>
+<body>
+  {{ content | safe }}
+</body>
+</html>

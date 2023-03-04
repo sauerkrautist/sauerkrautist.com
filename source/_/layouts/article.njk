@@ -1,0 +1,37 @@
+---
+layout: branding.njk
+css:
+  - root
+  - layout
+  - endnotes
+  - target
+  - article
+eleventyComputed:
+  pagetitle: "{{ title | text }} | {{ name }}"
+aria:
+  nav-main: Main
+  endnote-reference: Back to reference
+---
+<header>
+  <a href="/">{% include 'logotype.svg' %}</a>
+  <nav aria-labelledby="aria-nav-main">
+    {% nav %}
+  </nav>
+</header>
+<main id="main">
+  <h1>{{ title | markdown | safe }}</h1>
+  {% if cn %}
+    {% cn cn %}
+  {% endif %}
+  {{ content | safe }}
+</main>
+<footer>
+  <b>©</b>
+  {% site_link '1911', '/bleuler/' %}–{{ year }}
+  <a
+    href="{% git_history page.inputPath %}"
+    id="aria-github-user"
+    aria-labelledby="aria-github-user aria-github-history"
+  >{{ name }}</a> |
+  {% site_link 'accessibility', '/accessibility/' %}
+</footer>

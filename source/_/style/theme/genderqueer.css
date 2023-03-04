@@ -1,0 +1,10 @@
+:root {
+	--1: #4a8123;
+	--2: #fff;
+	--3: #b57edc;
+
+	--i: calc(var(--bg-height) / 3);
+
+	/* FIXME */
+	--bg-image: linear-gradient(to bottom, var(--1) 0, var(--1) var(--i), var(--2) var(--i), var(--2) calc(var(--i) * 2), var(--3) calc(var(--i) * 2));
+}

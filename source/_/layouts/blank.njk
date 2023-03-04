@@ -1,0 +1,23 @@
+---
+layout: root.njk
+eleventyComputed:
+  pagetitle: "{{ title }} | {{ name }}"
+css:
+  - root
+  - darkmode
+  - blank
+aria:
+  link: Sitemap
+---
+
+{{ content | safe }}
+
+{# Bad autistic style!!! #}
+{% set href = link + ('#' + group if group else '') if link else '/*/' %}
+
+<nav>
+  <a
+    href="{{ href }}"
+    aria-labelledby="aria-link"
+  >×</a>
+</nav>

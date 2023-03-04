@@ -1,0 +1,18 @@
+a[href][aria-current="page"] {
+	color: var(--foreground);
+	background: transparent;
+	text-decoration: none;
+}
+
+svg[aria-labelledby="aria-logotype"] g path:first-child {
+	fill: var(--foreground);
+}
+
+svg[aria-labelledby="aria-logotype"] g path:last-child {
+	fill: var(--highlight);
+}
+
+#main:target h1,
+:target:not(main, a) {
+	background-color: var(--target);
+}

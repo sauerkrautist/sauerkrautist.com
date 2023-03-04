@@ -1,0 +1,19 @@
+body > nav {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+body > nav > a[href] {
+	--size: var(--measure);
+	box-sizing: border-box;
+	width: var(--size);
+	height: var(--size);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	padding-bottom: 0.11em;
+	text-decoration: none;
+	font-weight: bold;
+}
