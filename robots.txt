@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /asperger/das-psychisch-abnorme-kind/
+Disallow: /bleuler/das-autistische-denken/
+Disallow: /bleuler/dementia-praecox/
+Disallow: /bleuler/lehrbuch-der-psychiatrie/
