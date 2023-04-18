@@ -1,9 +1,16 @@
 {
+  "config": {
+    "debug": "Eleventy:EleventyErrorHandler,sauerkrautist",
+    "file": "source/_/config.js",
+    "site": "docs"
+  },
   "scripts": {
-    "prebuild": "rm -rf docs/*",
-    "build": "NODE_ENV='production' eleventy --config source/_/config.js",
-    "prestart": "rm -rf docs/*",
-    "start": "DEBUG=Eleventy:EleventyErrorHandler,sauerkrautist eleventy --serve --incremental --config source/_/config.js",
+    "11ty": "eleventy --config ${npm_package_config_file}",
+    "clean": "rm -rf ${npm_package_config_site}/*",
+    "prebuild": "npm run clean",
+    "build": "NODE_ENV='production' npm run 11ty",
+    "prestart": "npm run clean",
+    "start": "DEBUG=${npm_package_config_debug} npm run 11ty -- --serve --incremental",
     "test": "node --test"
   },
   "devDependencies": {
