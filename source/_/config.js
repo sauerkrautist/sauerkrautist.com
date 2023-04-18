@@ -29,8 +29,8 @@ module.exports = function (configuration) {
 		dir: {
 			input: 'source',
 			output: 'docs',
-			data: '_/data',
-			layouts: '_/layouts',
+			data: `${includes}/data`,
+			layouts: `${includes}/layouts`,
 			includes,
 		},
 		markdownTemplateEngine: 'njk',
