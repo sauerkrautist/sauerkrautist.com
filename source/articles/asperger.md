@@ -268,7 +268,7 @@ With blunt, rusty devices.
       A PhD student, Marc Bush, has carried out a very detailed stylistic analysis of Asperger’s papers of 1938 and 1944 and believes that Asperger deliberately couched them in “Nazi-style” vocabulary to deceive the Nazis, while protecting the children in his charge in Vienna.
     {% endquote %}
 
-    Feinman then continues to quote pythonesque "evidence" from 
+    Feinstein then continues to quote pythonesque "evidence" from 
     [Asperger's 1938 lecture](/asperger/das-psychisch-abnorme-kind/)
     that is also prominently referred to by [Anna de Hooge](#endnote-binary-boys).
   {% endnote %}
