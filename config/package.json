@@ -14,9 +14,9 @@
     "test": "node --test"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
-    "eslint": "^8.29.0",
-    "html-minifier-terser": "^7.1.0",
+    "@11ty/eleventy": "^2.0.1",
+    "eslint": "^8.38.0",
+    "html-minifier-terser": "^7.2.0",
     "lodash.kebabcase": "^4.1.1",
     "unidecode": "^0.1.8"
   },
