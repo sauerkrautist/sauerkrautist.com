@@ -31,8 +31,8 @@ Because the false argument always points in the direction of the true cause.
 ### Straw children summoned by Autism Warrior Parents <!-- children -->
 
 *You are not like my child* is the incessant broken record chant that Autism Warrior Parents invoke to insult those autistic children of other parents who had the audacity to become adults.
-Already a decade ago, the absurdity of this imperishable ignorance was monumented by the autistic community blog 
 {%- ref 'awp' %}
+Already a decade ago, the absurdity of this imperishable ignorance was monumented by the autistic community blog 
 [*We Are Like Your Child*](https://wearelikeyourchild.blogspot.com/).
 
 Caregivers advocating for segregation instead of inclusion of their supposedly severe/real autistics are put to shame by the 2021 must-see documentary 
@@ -236,6 +236,10 @@ Samples include the life threatening, its lack of quality, actual murder and pit
   {% note 'buddhism' %}
     With apologies to Buddhism.
   {% endnote %}
+  {% note 'awp' %}
+    *Stimpunks* glossary:
+    [Autism Warrior Parent](https://stimpunks.org/glossary/autism-warrior-parent/).
+  {% endnote %}
   {% note 'AAC' %}
     {% citation {
       title: [
@@ -244,10 +248,6 @@ Samples include the life threatening, its lack of quality, actual murder and pit
       ],
       context: 'Wikipedia'
     } %}
-  {% endnote %}
-  {% note 'awp' %}
-    *Stimpunks* glossary:
-    [Autism Warrior Parent](https://stimpunks.org/glossary/autism-warrior-parent/).
   {% endnote %}
   {% note 'legion' %}
     Actually autistic activists would conscientiously object taking to battle a paramilitary organization that does not bother to disclose whether it self-identifies as [biblical](https://en.wikipedia.org/wiki/Legion_(demons)), 
@@ -274,6 +274,15 @@ Samples include the life threatening, its lack of quality, actual murder and pit
     [autistic style](/styleguide/).
     {%- ref 'poe' %}
   {% endnote %}
+  {% note 'fight-or-flight' %}
+    {% citation {
+      title: [
+        'Fight-or-flight response',
+        'https://en.wikipedia.org/wiki/Fight-or-flight_response'
+      ],
+      context: 'Wikipedia'
+    } %}
+  {% endnote %}
   {% note 'poe' %}
     {% citation {
       author: 'Edgar Allan Poe',
@@ -283,15 +292,6 @@ Samples include the life threatening, its lack of quality, actual murder and pit
       ],
       context: 'The Pioneer',
       year: 1843
-    } %}
-  {% endnote %}
-  {% note 'fight-or-flight' %}
-    {% citation {
-      title: [
-        'Fight-or-flight response',
-        'https://en.wikipedia.org/wiki/Fight-or-flight_response'
-      ],
-      context: 'Wikipedia'
     } %}
   {% endnote %}
 {% endendnotes %}
