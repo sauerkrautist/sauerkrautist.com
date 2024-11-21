@@ -6,7 +6,7 @@ const { entries } = Object;
 const layout = 'article.njk';
 const lang_default = 'en';
 const name = 'sauerkrautist';
-const catchphrase = 'hell is allistic people';
+const catchphrase = 'l’enfer, c’est les allistes';
 const description = "The Elements of Autistic Style: neuroqueering the square roots of white Western culture.";
 //#endregion
 
